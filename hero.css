@@ -1,0 +1,417 @@
+/* styles/hero.css - Hero Slider & Animations (Updated with stock image URLs) */
+
+/* 1. Hero Slider Container */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 80vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2. Individual Slides */
+.hero-slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
+}
+.hero-slider .slide.active {
+  display: flex;
+  opacity: 1;
+  z-index: 1;
+}
+.hero-slider .slide.inactive {
+  opacity: 0;
+  z-index: 0;
+}
+
+/* 3. Slide Backgrounds using Unsplash stock images */
+.slide[data-index="0"] {
+  background-image: url('https://source.unsplash.com/1600x900/?library,books');
+}
+.slide[data-index="1"] {
+  background-image: url('https://source.unsplash.com/1600x900/?classroom,students');
+}
+.slide[data-index="2"] {
+  background-image: url('https://source.unsplash.com/1600x900/?study,english');
+}
+
+/* 4. Overlay SVG Animations */
+.overlay-svg {
+  position: absolute;
+  pointer-events: none;
+  animation: floatSVG 6s ease-in-out infinite;
+}
+@keyframes floatSVG {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.05); }
+}
+
+/* 5. Hero Text Block */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding: var(--space-md);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: var(--radius-md);
+  text-align: center;
+  color: #fff;
+}
+.hero-text h1 {
+  font-size: var(--fs-3xl);
+  margin-bottom: var(--space-sm);
+  animation: fadeInUp 1s ease-out both;
+}
+.hero-text p {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-md);
+  animation: fadeInUp 1.2s ease-out both;
+}
+.hero-text .btn {
+  animation: fadeInUp 1.4s ease-out both;
+}
+
+/* 6. Fade In Up Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 7. Slider Navigation Buttons */
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: var(--fs-2xl);
+  padding: var(--space-sm) var(--space-md);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.3s;
+  z-index: 3;
+}
+.slider-nav:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+.slider-nav.prev { left: var(--space-lg); }
+.slider-nav.next { right: var(--space-lg); }
+
+/* 8. Responsive Hero Text */
+@media (max-width: 1024px) {
+  .hero-text h1 { font-size: var(--fs-2xl); }
+  .hero-text p { font-size: var(--fs-md); }
+}
+@media (max-width: 768px) {
+  .hero-slider { height: 60vh; }
+  .slider-nav { display: none; }
+}
+
+/* 9. Parallax Effect Wrapper */
+.hero-slider::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-attachment: fixed;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  transform: translateZ(-1px) scale(2);
+  z-index: 0;
+}
+
+/* 10. Accessibility Focus States */
+.slider-nav:focus,
+.icon-btn:focus,
+.main-nav a:focus {
+  outline: 2px dashed var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+  color: var(--color-text);
+}
+
+/* Impact Stories */
+.impact-stories {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+  max-width: 800px;
+  z-index: 3;
+}
+
+.story-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 300px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.story-card.active {
+  opacity: 1;
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.story-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.story-content p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.story-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--color-primary);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+/* Accessibility Toolbar */
+.accessibility-toolbar {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem;
+  border-radius: 30px;
+  z-index: 1000;
+}
+
+.access-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.access-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Programs Section */
+.programs {
+  padding: 4rem 0;
+  background-color: var(--color-surface);
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.program-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+}
+
+.program-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.program-features {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.program-features li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.program-features li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content {
+    padding: 1rem;
+  }
+  
+  .impact-stories {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .story-card {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .accessibility-toolbar {
+    bottom: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  --color-text: #000;
+  --color-surface: #fff;
+  --color-primary: #0000ff;
+  --color-primary-dark: #0000cc;
+}
+
+/* Dyslexia-friendly Font */
+.dyslexia-friendly {
+  font-family: 'OpenDyslexic', Arial, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.35px;
+  word-spacing: 0.16em;
+}
+
+/* End of hero.css (updated) */

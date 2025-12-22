@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OurEnglish</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="styles/main.css" />
+  <!-- Theme Script -->
+  <script src="js/theme.js" defer></script>
+</head>
+<body>
+  <div class="guide-bar">
+    <div class="guide-bar-left">
+      <a href="/about">About Us</a>
+      <div class="dropdown">
+        <a href="/programs">Programs</a>
+        <div class="dropdown-menu">
+          <a href="/programs/english">English Learning</a>
+          <a href="/programs/career">Career Development</a>
+          <a href="/programs/community">Community Support</a>
+        </div>
+      </div>
+      <a href="/impact">Our Impact</a>
+    </div>
+    <div class="guide-bar-right">
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+      <a href="/contact">Contact</a>
+      <a href="/donate">Donate</a>
+      <a href="/volunteer">Volunteer</a>
+    </div>
+  </div>
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="logo">OurEnglish</div>
+      <nav class="main-nav">
+        <ul class="mega-menu">
+          <li><a href="#courses">Courses</a>
+            <div class="dropdown">
+              <div class="col">
+                <h4>By Skill</h4>
+                <a href="#">Speaking</a>
+                <a href="#">Listening</a>
+                <a href="#">Reading</a>
+                <a href="#">Writing</a>
+              </div>
+              <div class="col">
+                <h4>By Level</h4>
+                <a href="#">Beginner</a>
+                <a href="#">Intermediate</a>
+                <a href="#">Advanced</a>
+              </div>
+              <div class="col">
+                <h4>By Exam</h4>
+                <a href="#">TOEFL</a>
+                <a href="#">IELTS</a>
+                <a href="#">Cambridge</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#levels">Levels</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <button id="search-toggle" class="icon-btn">��</button>
+        <button id="mobile-menu-toggle" class="icon-btn" aria-expanded="false" aria-label="Toggle menu">☰</button>
+        <a href="#enroll" class="btn enroll">Enroll Now</a>
+      </div>
+    </div>
+    <div id="search-bar" class="search-bar hidden">
+      <div class="container">
+        <input type="text" id="search-input" placeholder="Search courses…" aria-label="Search courses" />
+      </div>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav hidden">
+      <ul>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#levels">Levels</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-media">
+      <video autoplay muted loop playsinline>
+        <source src="videos/hero-background.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>English for Everyone</h1>
+        <p class="hero-subtitle">Making language learning accessible to all</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">x</span>
+            <span class="stat-label">Students</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">Accessible</span>
+            <span class="stat-label">For All!</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Community</span>
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a href="#courses" class="btn btn-primary btn-large">Start Learning</a>
+          <a href="#donate" class="btn btn-outline btn-large">Support Our Mission</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Discover More</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- Featured Courses -->
+  <section class="featured-courses">
+    <div class="section-header">
+      <h2>Our Signature Programs</h2>
+      <p>Curated learning experiences for every level</p>
+    </div>
+    <div class="course-grid">
+      <article class="course-card">
+        <div class="card-media">
+          <img src="images/basic-english.jpg" alt="Basic English Course">
+          <div class="card-overlay">
+            <button class="quick-view">Quick View</button>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Basic English</h3>
+          <p>Foundation of language mastery</p>
+          <a href="#basic" class="btn btn-outline">Learn More</a>
+        </div>
+      </article>
+      <!-- Similar cards for Business and Conversational English -->
+    </div>
+  </section>
+
+  <!-- Learning Experience -->
+  <section class="learning-experience">
+    <div class="experience-grid">
+      <div class="experience-content">
+        <h2>The Art of Learning</h2>
+        <p>Immerse yourself in a world of language excellence</p>
+        <ul class="feature-list">
+          <li>
+            <i class="fas fa-graduation-cap"></i>
+            <span>Expert Instructors</span>
+          </li>
+          <li>
+            <i class="fas fa-book"></i>
+            <span>Comprehensive Curriculum</span>
+          </li>
+          <li>
+            <i class="fas fa-users"></i>
+            <span>Personalized Attention</span>
+          </li>
+        </ul>
+      </div>
+      <div class="experience-media">
+        <img src="images/learning-experience.jpg" alt="Learning Experience">
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Showcase -->
+  <section class="course-showcase">
+    <div class="showcase-header">
+      <h2>Explore Our Collection</h2>
+      <p class="showcase-subtitle">Curated programs designed for your success</p>
+      <div class="showcase-nav">
+        <button class="nav-btn active" data-category="all">All Courses</button>
+        <button class="nav-btn" data-category="beginner">Beginner</button>
+        <button class="nav-btn" data-category="intermediate">Intermediate</button>
+        <button class="nav-btn" data-category="advanced">Advanced</button>
+      </div>
+    </div>
+    <div class="showcase-grid">
+      <article class="course-card" data-category="beginner">
+        <div class="card-media">
+          <img src="images/basic-english.jpg" alt="Basic English Course">
+          <div class="card-overlay">
+            <button class="quick-view">Quick View</button>
+          </div>
+          <div class="course-badge">Most Popular</div>
+        </div>
+        <div class="card-content">
+          <div class="course-header">
+            <h3>Basic English</h3>
+            <div class="course-rating">
+              <i class="fas fa-star"></i>
+              <span>4.9</span>
+            </div>
+          </div>
+          <p class="course-description">Master the fundamentals with our comprehensive beginner program</p>
+          <div class="course-features">
+            <div class="feature">
+              <i class="fas fa-clock"></i>
+              <span>8 Weeks</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-users"></i>
+              <span>Small Groups</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-certificate"></i>
+              <span>Certificate</span>
+            </div>
+          </div>
+          <div class="course-actions">
+            <a href="#enroll" class="btn btn-primary">Start Learning</a>
+            <button class="btn btn-outline preview-btn">Preview Course</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Intermediate Courses -->
+      <article class="course-card" data-category="intermediate">
+        <div class="card-media">
+          <img src="images/intermediate-english.jpg" alt="Intermediate English Course">
+          <div class="card-overlay">
+            <button class="quick-view">Quick View</button>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Intermediate English</h3>
+          <p>Enhance your fluency with complex grammar structures and advanced vocabulary.</p>
+          <div class="course-features">
+            <div class="feature">
+              <i class="fas fa-clock"></i>
+              <span>12 Weeks</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-users"></i>
+              <span>Interactive</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-certificate"></i>
+              <span>Advanced</span>
+            </div>
+          </div>
+          <div class="course-actions">
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+            <a href="#" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Advanced Courses -->
+      <article class="course-card" data-category="advanced">
+        <div class="card-media">
+          <img src="images/advanced-english.jpg" alt="Advanced English Course">
+          <div class="card-overlay">
+            <button class="quick-view">Quick View</button>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Advanced English</h3>
+          <p>Master sophisticated language skills for academic and professional excellence.</p>
+          <div class="course-features">
+            <div class="feature">
+              <i class="fas fa-clock"></i>
+              <span>16 Weeks</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-users"></i>
+              <span>Expert-led</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-certificate"></i>
+              <span>Premium</span>
+            </div>
+          </div>
+          <div class="course-actions">
+            <a href="#" class="btn btn-primary">Enroll Now</a>
+            <a href="#" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="showcase-footer">
+      <div class="trust-badges">
+        <div class="badge">
+          <i class="fas fa-shield-alt"></i>
+          <span>100% Free</span>
+        </div>
+        <div class="badge">
+          <i class="fas fa-hand-holding-heart"></i>
+          <span>Community Support</span>
+        </div>
+        <div class="badge">
+          <i class="fas fa-globe-americas"></i>
+          <span>Global Access</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="testimonial-slider">
+      <div class="testimonial-slide">
+        <div class="testimonial-content">
+          <p>"A transformative journey in language learning"</p>
+          <cite>- Sarah</cite>
+        </div>
+      </div>
+      <!-- More testimonials -->
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Begin Your Journey</h2>
+      <p>Join thousands of successful learners</p>
+      <a href="#enroll" class="btn btn-primary btn-large">Start Learning Today</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>OurEnglish</h3>
+          <p>Master English with confidence through our interactive courses and expert tutors.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" class="social-icon" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://tiktok.com" class="social-icon" aria-label="Follow us on TikTok" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-tiktok" aria-hidden="true"></i>
+            </a>
+            <a href="https://threads.net" class="social-icon" aria-label="Follow us on Threads" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-threads" aria-hidden="true"></i>
+            </a>
+            <a href="https://youtube.com" class="social-icon" aria-label="Subscribe to our YouTube channel" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-youtube" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#levels">Levels</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="#basic">Basic English</a></li>
+            <li><a href="#business">Business English</a></li>
+            <li><a href="#conversational">Conversational English</a></li>
+            <li><a href="#exam">Exam Preparation</a></li>
+            <li><a href="#private">Private Lessons</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#materials">Learning Materials</a></li>
+            <li><a href="#success">Success Stories</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#support">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="contact-info">
+            <li><i class="fas fa-envelope"></i> info@ourenglish.com</li>
+            <li><i class="fas fa-phone"></i> +7 700 700 700</li>
+            <li><i class="fas fa-map-marker-alt"></i> Englishtown Avenue</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2024 English School. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#cookies">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Share Buttons -->
+  <div class="share-buttons">
+    <button class="share-btn" aria-label="Share on Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </button>
+    <button class="share-btn" aria-label="Share on Twitter">
+      <i class="fab fa-twitter"></i>
+    </button>
+    <button class="share-btn" aria-label="Share on LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </button>
+    <button class="share-btn" aria-label="Share via Email">
+      <i class="fas fa-envelope"></i>
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/accessibility.js" defer></script>
+  <script src="js/share.js" defer></script>
+  <script src="js/back-to-top.js" defer></script>
+  <script src="js/carousel.js" defer></script>
+  <script type="module" src="scripts/main.js" defer></script>
+  <script type="module" src="scripts/menu.js" defer></script>
+  <script type="module" src="scripts/slider.js" defer></script>
+  <script type="module" src="scripts/courses.js" defer></script>
+  <script type="module" src="scripts/form.js" defer></script>
+  <script>
+    // Check for saved dark mode preference on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedPreferences = localStorage.getItem('accessibilityPreferences');
+      if (savedPreferences) {
+        const preferences = JSON.parse(savedPreferences);
+        if (preferences.darkMode) {
+          document.body.classList.add('dark-mode');
+        }
+      }
+    });
+  </script>
+</body>
+</html>

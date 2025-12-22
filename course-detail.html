@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Detail - Conversational English</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/grid.css">
+  <link rel="stylesheet" href="styles/forms.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+  <!-- Header Include -->
+
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li aria-current="page">Conversational English</li>
+    </ul>
+  </nav>
+
+  <!-- Course Detail -->
+  <main class="course-detail container">
+    <div class="course-detail__gallery">
+      <div class="main-image">
+        <img id="main-course-image" src="https://source.unsplash.com/600x400/?english,lesson" alt="Conversational English Lesson">
+      </div>
+      <div class="thumbnails">
+        <img class="thumb" src="https://source.unsplash.com/60x40/?english,classroom" data-src="https://source.unsplash.com/600x400/?english,classroom" alt="Classroom">
+        <img class="thumb" src="https://source.unsplash.com/60x40/?students,learning" data-src="https://source.unsplash.com/600x400/?students,learning" alt="Students Learning">
+        <img class="thumb" src="https://source.unsplash.com/60x40/?teacher,teaching" data-src="https://source.unsplash.com/600x400/?teacher,teaching" alt="Teacher Teaching">
+      </div>
+    </div>
+    <div class="course-detail__info">
+      <h1>Conversational English</h1>
+      <p class="meta">Skill: Speaking | Level: Beginner | Duration: 8 weeks</p>
+      <p class="description">This course helps you develop confidence in everyday situations, covering essential vocabulary, idiomatic expressions, and real‑world dialogues.</p>
+      <a href="#" class="btn enroll">Enroll Now</a>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <ul role="tablist" class="tabs__list">
+        <li role="presentation"><button role="tab" id="tab-overview" aria-controls="panel-overview" aria-selected="true">Overview</button></li>
+        <li role="presentation"><button role="tab" id="tab-curriculum" aria-controls="panel-curriculum">Curriculum</button></li>
+        <li role="presentation"><button role="tab" id="tab-instructor" aria-controls="panel-instructor">Instructor</button></li>
+        <li role="presentation"><button role="tab" id="tab-reviews" aria-controls="panel-reviews">Reviews</button></li>
+      </ul>
+      <div class="tabs__panels">
+        <section id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
+          <h2>Course Overview</h2>
+          <p>In this course, you’ll learn practical conversation skills through interactive sessions, role-plays, and real-life scenarios designed to boost your fluency and confidence.</p>
+        </section>
+        <section id="panel-curriculum" role="tabpanel" aria-labelledby="tab-curriculum" hidden>
+          <h2>Curriculum</h2>
+          <ul class="curriculum">
+            <li>Week 1: Greetings & Introductions</li>
+            <li>Week 2: Small Talk & Everyday Conversations</li>
+            <li>Week 3: Asking for Directions & Transportation</li>
+            <li>Week 4: Dining & Ordering Food</li>
+            <li>Week 5: Shopping & Services</li>
+            <li>Week 6: Health & Emergencies</li>
+            <li>Week 7: Cultural Topics & Etiquette</li>
+            <li>Week 8: Final Review & Role‑play Assessment</li>
+          </ul>
+        </section>
+        <section id="panel-instructor" role="tabpanel" aria-labelledby="tab-instructor" hidden>
+          <h2>Instructor</h2>
+          <div class="instructor">
+            <img src="https://source.unsplash.com/150x150/?teacher,portrait" alt="Instructor Photo">
+            <div class="instructor__bio">
+              <p><strong>Jane</strong> is a certified ESL instructor with over 10 years of experience teaching in international settings. Her interactive methods ensure rapid progress and lasting confidence.</p>
+            </div>
+          </div>
+        </section>
+        <section id="panel-reviews" role="tabpanel" aria-labelledby="tab-reviews" hidden>
+          <h2>Student Reviews</h2>
+          <div class="reviews">
+            <blockquote>“This course changed my life! I now speak with ease in real situations.” – Alex P.</blockquote>
+            <blockquote>“The instructor was engaging and the materials were practical.” – Maria L.</blockquote>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Include -->
+
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/menu.js"></script>
+  <script src="scripts/slider.js"></script>
+  <script src="scripts/courses.js"></script>
+  <script src="scripts/form.js"></script>
+  <script src="scripts/course-detail.js"></script>
+</body>
+</html>
