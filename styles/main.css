@@ -1766,3 +1766,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #1a1a1a !important;
   opacity: 1 !important;
 }
+
+
+section:empty {
+  display: none;
+}
