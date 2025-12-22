@@ -1755,3 +1755,14 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-transform: translateZ(0);
   }
 }
+/* FIX: make card text readable */
+.course-card,
+.course-card p,
+.course-card .course-description,
+.course-card .feature,
+.course-card .tag,
+.course-card li,
+.course-card span {
+  color: #1a1a1a !important;
+  opacity: 1 !important;
+}
