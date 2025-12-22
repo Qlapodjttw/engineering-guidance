@@ -1381,6 +1381,15 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin-bottom: 4rem;
   padding: 0 2rem;
+  color: var(--color-text);
+}
+
+.section-header h2 {
+  color: var(--color-heading);
+}
+
+.section-header p {
+  color: var(--color-text);
 }
 
 .course-grid {
@@ -1476,12 +1485,32 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem;
+  color: var(--color-text);
+}
+
+.feature-list li span {
+  color: var(--color-text);
+  font-weight: var(--fw-medium);
 }
 
 .feature-list i {
   font-size: 1.5rem;
   color: var(--color-accent);
   margin-right: 1rem;
+}
+
+.experience-content {
+  color: var(--color-text);
+}
+
+.experience-content p {
+  color: var(--color-text);
+  font-size: var(--fs-lg);
+  line-height: 1.6;
+}
+
+.experience-content h2 {
+  color: var(--color-heading);
 }
 
 /* Testimonials */
