@@ -102,7 +102,7 @@
 .experience-description {
   font-size: var(--fs-base);
   line-height: var(--lh-normal);
-  color: var(--color-text-light);
+  color: var(--color-text);
 }
 
 /* Dark Mode Adjustments */
