@@ -1381,15 +1381,18 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin-bottom: 4rem;
   padding: 0 2rem;
-  color: var(--color-text);
+  color: #000000;
+  background-color: var(--color-white);
 }
 
 .section-header h2 {
-  color: var(--color-heading);
+  color: #000000;
+  font-weight: var(--fw-bold);
 }
 
 .section-header p {
-  color: var(--color-text);
+  color: #000000;
+  font-weight: var(--fw-medium);
 }
 
 .course-grid {
@@ -1463,6 +1466,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Learning Experience */
 .learning-experience {
   padding: 6rem 0;
+  background-color: var(--color-white);
 }
 
 .experience-grid {
@@ -1485,12 +1489,13 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem;
-  color: var(--color-text);
+  color: #000000;
 }
 
 .feature-list li span {
-  color: var(--color-text);
-  font-weight: var(--fw-medium);
+  color: #000000;
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-lg);
 }
 
 .feature-list i {
@@ -1500,17 +1505,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .experience-content {
-  color: var(--color-text);
+  color: #000000;
 }
 
 .experience-content p {
-  color: var(--color-text);
+  color: #000000;
   font-size: var(--fs-lg);
   line-height: 1.6;
+  font-weight: var(--fw-medium);
 }
 
 .experience-content h2 {
-  color: var(--color-heading);
+  color: #000000;
+  font-weight: var(--fw-bold);
 }
 
 /* Testimonials */
