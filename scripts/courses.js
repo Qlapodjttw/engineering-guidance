@@ -1,16 +1,16 @@
 /* scripts/courses.js - Dynamic Catalog Rendering & Filters (Updated with Unsplash stock image URLs) */
 
 function initCourses() {
-  // Sample static data with Unsplash stock images
+  // Sample static data with Unsplash stock images - Engineering Fields
   const courses = [
-    { id: 1, title: 'Conversational English', skill: 'speaking', level: 'beginner', image: 'https://source.unsplash.com/400x300/?english,conversation', description: 'Speak confidently in everyday situations.' },
-    { id: 2, title: 'Business English', skill: 'writing', level: 'advanced', image: 'https://source.unsplash.com/400x300/?business,meeting', description: 'Master professional communication with advanced business writing, negotiation skills, and corporate presentation techniques. Perfect for executives and professionals.' },
-    { id: 3, title: 'Grammar Mastery', skill: 'reading', level: 'intermediate', image: 'https://source.unsplash.com/400x300/?grammar,books', description: 'Deep dive into complex grammar structures, advanced tenses, and nuanced language patterns. Build a solid foundation for academic and professional success.' },
-    { id: 4, title: 'Exam Prep TOEFL', skill: 'listening', level: 'advanced', image: 'https://source.unsplash.com/400x300/?toefl,exam', description: 'Comprehensive TOEFL preparation with advanced listening comprehension, academic vocabulary, and test-taking strategies. Achieve your target score with expert guidance.' },
-    { id: 5, title: 'IELTS Intensive', skill: 'reading', level: 'intermediate', image: 'https://source.unsplash.com/400x300/?ielts,study', description: 'Develop advanced reading comprehension skills, critical analysis, and time management techniques. Perfect for students aiming for Band 6.5+ in IELTS.' },
-    { id: 6, title: 'Writing Workshop', skill: 'writing', level: 'beginner', image: 'https://source.unsplash.com/400x300/?writing,workshop', description: 'Creative writing fundamentals.' },
-    { id: 7, title: 'Pronunciation Clinic', skill: 'speaking', level: 'advanced', image: 'https://source.unsplash.com/400x300/?pronunciation,practice', description: 'Perfect your accent with advanced phonetics, intonation patterns, and native-like pronunciation. Ideal for professionals and public speakers.' },
-    { id: 8, title: 'Listening Lab', skill: 'listening', level: 'beginner', image: 'https://source.unsplash.com/400x300/?listening,audio', description: 'Improve comprehension skills.' }
+    { id: 1, title: 'Mechanical Engineering', skill: 'mechanical', level: 'beginner', image: 'https://source.unsplash.com/400x300/?mechanical,engineering', description: 'Design and build machines, systems, and devices. Perfect if you love building things and solving mechanical problems.' },
+    { id: 2, title: 'Software Engineering', skill: 'software', level: 'intermediate', image: 'https://source.unsplash.com/400x300/?software,programming', description: 'Create software applications and systems. Ideal for problem-solvers who enjoy coding and technology innovation.' },
+    { id: 3, title: 'Electrical Engineering', skill: 'electrical', level: 'intermediate', image: 'https://source.unsplash.com/400x300/?electrical,circuit', description: 'Work with electronics, power systems, and circuits. Great for those fascinated by electricity and technology.' },
+    { id: 4, title: 'Civil Engineering', skill: 'civil', level: 'beginner', image: 'https://source.unsplash.com/400x300/?civil,construction', description: 'Design and build infrastructure like bridges, roads, and buildings. Perfect for those who want to shape the physical world.' },
+    { id: 5, title: 'Chemical Engineering', skill: 'mechanical', level: 'advanced', image: 'https://source.unsplash.com/400x300/?chemical,laboratory', description: 'Transform raw materials into useful products. Ideal for those interested in chemistry and industrial processes.' },
+    { id: 6, title: 'Aerospace Engineering', skill: 'mechanical', level: 'advanced', image: 'https://source.unsplash.com/400x300/?aerospace,aircraft', description: 'Design aircraft and spacecraft. Perfect for those fascinated by flight and space exploration.' },
+    { id: 7, title: 'Biomedical Engineering', skill: 'software', level: 'intermediate', image: 'https://source.unsplash.com/400x300/?biomedical,medical', description: 'Combine engineering with medicine to improve healthcare. Great for those who want to help people through technology.' },
+    { id: 8, title: 'Environmental Engineering', skill: 'civil', level: 'beginner', image: 'https://source.unsplash.com/400x300/?environmental,green', description: 'Protect the environment through sustainable engineering solutions. Perfect for those passionate about sustainability.' }
   ];
 
   // Pagination settings
@@ -39,7 +39,7 @@ function initCourses() {
         <img src="${course.image}" alt="${course.title}" loading="lazy" />
         <h3>${course.title}</h3>
         <p>${course.description}</p>
-        <a href="course-detail.html?id=${course.id}" class="btn enroll">Learn More</a>
+        <a href="course-detail.html?id=${course.id}" class="btn enroll">Explore Field</a>
       `;
       grid.appendChild(card);
     });
